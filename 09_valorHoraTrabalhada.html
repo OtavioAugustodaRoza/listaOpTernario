@@ -8,11 +8,12 @@
     // Apresente o salário final recebido pelo funcionário semanalmente e o preço de cada hora trabalhada.
 
     //Entrada
-
-
+const horas = Number(prompt('quantas horas você trabalha por semana ?'));
+const recebePorHora = Number(prompt('quantos você recebe por hora trabalhada ?'));
+let mensagem = "" ;
     //Processamento
-
+(horas <= 45 ) ? mensagem = (`O valor que será recebido por cada hora trabalhada será de R$ ${recebePorHora} e o valor recebido semanalmente será de ${recebePorHora*horas}`) : (horas > 45 && horas < 61) ? mensagem = (`O valor que será recebido por cada hora trabalhada será de R$ ${(recebePorHora*1.20).toFixed(2)} e o valor recebido semanalmente será de ${((recebePorHora*horas)*1.20).toFixed(2)}`) : mensagem = (`O valor que será recebido por cada hora trabalhada será de R$ ${(recebePorHora*1.30).toFixed(2)} e o valor recebido semanalmente será de ${((recebePorHora*horas)*1.30).toFixed(2)}`) ;
     
     //Saída
-
+alert(mensagem);
 </script>

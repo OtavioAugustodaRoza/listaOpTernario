@@ -10,10 +10,14 @@
     // Verifique se o usuário ganha mais do que recebe e apresente em tela, indicando quanto que sobrou após o pagamento das contas ou quanto que faltou para poder pagar todas as contas previstas.
 
     //Entrada
-
-
+const salario =Number(prompt('qual o seu salário?'));
+const agua = Number(prompt('digite os custos relcionados a conta de água:'));
+const energia = Number(prompt('digite os custos relcionados a conta de energia elétrica:'));
+const telefone = Number(prompt('digite os custos relcionados a conta de telefone:'));
+const Supermercado = Number(prompt('digite os custos relcionados a conta de supermercado:'));
+let mensagem = "" ;
     //Processamento
-
+(salario > (agua + energia + telefone + Supermercado)) ? mensagem = (`Você recebe mais do que seus custos, esse mês sobrou R$ ${salario - (agua + energia + telefone + Supermercado)}`) : (salario === (agua + energia + telefone + Supermercado)) ? mensagem = (`Esse mês parece que ficou no zero a zero, seu salário é de  R$ ${salario} e suas despesas são de R$ ${agua + energia + telefone + Supermercado} então você ficou com o total de R$ ${}`)
     
     //Saída
     
