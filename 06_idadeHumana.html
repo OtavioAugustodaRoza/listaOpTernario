@@ -8,11 +8,13 @@
     // - cães grandes: fator 7.
 
     //Entrada
-
+const porte = prompt('qual o porte do seu cachorro? pequeno, médio(não esqueça do acento) ou grande');
+const idadeDoCao = Number(prompt('qual a idade do seu cachorro?'));
+let mensagem = ""; 
 
     //Processamento
-
+    (porte === "pequeno") ? mensagem = (`A idade humana do seu cão é de ${idadeDoCao * 5 } ano(s)`) :(porte ==="médio") ? mensagem =(`A idade humana do seu cão é de ${idadeDoCao * 6 } ano(s) `) : (porte === "grande") ? mensagem =(`A idade humana do seu cão é de ${idadeDoCao * 7 } ano(s) `) : mensagem ="Porte INVÁLIDO!";
     
     //Saída
-
-</script>
+alert(mensagem);
+</script> 

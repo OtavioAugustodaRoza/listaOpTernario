@@ -6,12 +6,14 @@
     // Verifique qual é o meio de transporte mais barato e apresente em tela, especificando quanto custará para ir e voltar do trabalho diariamente.
 
     //Entrada
-
-
+const precoDoCom = Number(prompt('qual o preço do litro do combustível?'));
+const quantidade = Number(prompt('quantos litros você são necessarios para se deslocar ao trabalho diariamente?'));
+const publico = Number(prompt('quantos deverá ser pago para se deslocar diarimente ao trabalho pelo transporte público?'));
+let mensagem = "" ; 
     //Processamento
-
+(precoDoCom * quantidade > publico ) ? mensagem = (`O meio de transporte mais barato será o público, custando R$ ${publico*2} para ir e voltar do trabalho diariamente`) :(publico>precoDoCom*quantidade) ?mensagem = (`O meio de transporte mais barato será o individual, custando R$ ${(precoDoCom*quantidade)*2} para ir e voltar do trabalho diariamente`) : ((precoDoCom*quantidade) === publico) ? mensagem =(`O valor vai ser igual, transporte público R$ ${publico*2} e transporte individual R$ ${(precoDoCom*quantidade)*2}`) : mensagem = ("Por favor não escreva por extenso apenas digite o número!");
     
     //Saída
-
+alert(mensagem);
     
 </script>

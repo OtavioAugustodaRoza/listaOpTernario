@@ -8,11 +8,12 @@
         //- acima de 1500: aumento de 5 %
     
     //Entrada
-
+const Preco = Number(prompt('Qual o preço do produto?'));
+let mensagem = "" ;
 
     //Processamento
-
+(Preco < 281) ? mensagem=(`O novo valor do produto é de R$ ${(Preco * 1.20).toFixed(2)}`) : (Preco < 701) ? mensagem=(`O novo valor do produto é de R$ ${(Preco * 1.15).toFixed(2)}`) : (Preco < 1501) ? mensagem=(`O novo valor do produto é de R$ ${(Preco * 1.10 ).toFixed(2)}`) : mensagem=(`O novo valor do produto é de R$ ${(Preco * 1.05).toFixed(2)}`);
     
     //Saída
-
+alert(mensagem);
 </script>
